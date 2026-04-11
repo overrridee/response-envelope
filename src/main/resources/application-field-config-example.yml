@@ -1,0 +1,189 @@
+# Response Envelope Field Configuration Examples
+# This file contains examples for field configuration
+
+response-envelope:
+  enabled: true
+  
+  # Field Configuration - Dynamically control fields in response
+  field-config:
+    enabled: true
+    
+    # ============================================
+    # EXAMPLE 1: Minimal Configuration
+    # Only basic fields
+    # ============================================
+    enabled-fields:
+      success: true
+      data: true
+      message: true
+      timestamp: false
+      requestId: false
+      path: false
+      method: false
+      duration: false
+      apiVersion: false
+    
+    # ============================================
+    # EXAMPLE 2: Production Configuration
+    # Optimized for production
+    # ============================================
+#    enabled-fields:
+#      success: true
+#      data: true
+#      message: true
+#      timestamp: false      # closed for performance
+#      requestId: true       # open for tracing
+#      path: false           # closed for security
+#      method: false         # closed for security
+#      duration: false       # performance info hidden
+#      apiVersion: true
+    
+    # ============================================
+    # EXAMPLE 3: Development/Debug Configuration
+    # All information open
+    # ============================================
+#    enabled-fields:
+#      success: true
+#      data: true
+#      message: true
+#      timestamp: true
+#      requestId: true
+#      path: true
+#      method: true
+#      duration: true
+#      apiVersion: true
+    
+    # ============================================
+    # Global Custom Fields
+    # Automatically added to all responses
+    # ============================================
+    custom-fields:
+      environment: production
+      region: eu-west-1
+      datacenter: dc1
+      version: 2.1.0
+      tenant: default
+      
+    # ============================================
+    # Field Name Customization
+    # Change default field names
+    # ============================================
+    field-names:
+      success: status           # success -> status
+      data: result             # data -> result
+      requestId: traceId       # requestId -> traceId
+      timestamp: time          # timestamp -> time
+      
+    # ============================================
+    # Conditional Fields
+    # Add fields under certain conditions
+    # ============================================
+    conditional-fields:
+      
+      # Only in successful responses
+      on-success:
+        cached: false
+        source: api-gateway
+        
+      # Only in error case
+      on-error:
+        support-contact: support@example.com
+        documentation: https://docs.example.com/errors
+        retry-allowed: true
+        
+      # On specific HTTP statuses
+      on-http-status:
+        404:
+          suggestion: Check the resource ID or path
+          search-url: /api/search
+        429:
+          retry-after: 60
+          rate-limit-exceeded: true
+          quota-reset-time: "2024-04-11T00:00:00Z"
+        500:
+          incident-id: auto-generated
+          support-ticket: auto-created
+          
+      # On specific path patterns
+      on-path-pattern:
+        "/api/admin/**":
+          admin-mode: true
+          audit-log: enabled
+          elevated-permissions: true
+        "/api/public/**":
+          rate-limit: 100
+          public-access: true
+          authentication-required: false
+        "/api/internal/**":
+          internal-api: true
+          service-mesh: enabled
+
+# ============================================
+# PRESET CONFIGURATIONS
+# Ready-made configuration sets
+# ============================================
+
+# MINIMAL Preset
+#response-envelope:
+#  field-config:
+#    enabled-fields:
+#      success: true
+#      data: true
+#      message: true
+
+# STANDARD Preset (Recommended)
+#response-envelope:
+#  field-config:
+#    enabled-fields:
+#      success: true
+#      data: true
+#      message: true
+#      timestamp: true
+#      requestId: true
+
+# FULL Preset
+#response-envelope:
+#  field-config:
+#    enabled-fields:
+#      success: true
+#      data: true
+#      message: true
+#      timestamp: true
+#      requestId: true
+#      path: true
+#      method: true
+#      duration: true
+#      apiVersion: true
+#      pagination: true
+#      links: true
+
+# DEBUG Preset
+#response-envelope:
+#  field-config:
+#    enabled-fields:
+#      success: true
+#      data: true
+#      message: true
+#      timestamp: true
+#      requestId: true
+#      path: true
+#      method: true
+#      duration: true
+#      apiVersion: true
+#    custom-fields:
+#      debug: true
+#      server-name: ${HOSTNAME:unknown}
+#      instance-id: ${INSTANCE_ID:local}
+
+# PRODUCTION Preset
+#response-envelope:
+#  field-config:
+#    enabled-fields:
+#      success: true
+#      data: true
+#      message: true
+#      requestId: true
+#      timestamp: false
+#      path: false
+#      method: false
+#      duration: false

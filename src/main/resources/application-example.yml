@@ -1,0 +1,131 @@
+# Example configuration for Response Envelope
+# Copy this file to your project and rename to application.yml
+
+response-envelope:
+  # Enable/disable the entire feature
+  enabled: true
+
+  # Default configuration for all responses
+  default-config:
+    # Include timestamp in response
+    include-timestamp: true
+
+    # Include request ID for distributed tracing
+    include-request-id: true
+
+    # Include request path
+    include-path: true
+
+    # Include HTTP method
+    include-method: true
+
+    # Include processing duration (ms)
+    include-duration: true
+
+    # Include API version
+    include-api-version: true
+
+    # Timestamp format options: ISO_8601, EPOCH_MILLIS, EPOCH_SECONDS, RFC_1123, CUSTOM
+    timestamp-format: ISO_8601
+
+    # Custom timestamp pattern (only used when timestamp-format is CUSTOM)
+    custom-timestamp-pattern: "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
+
+    # Header name for request ID
+    request-id-header: X-Request-ID
+
+    # Propagate request ID to response header
+    propagate-request-id: true
+
+    # Default API version
+    default-version: v1
+
+    # Include null values in JSON
+    include-nulls: false
+
+    # Default data key name
+    data-key: data
+
+    # Timezone for timestamp
+    timezone: UTC
+
+  # Error handling configuration
+  error-config:
+    # Include stack trace (NEVER enable in production!)
+    include-stacktrace: false
+
+    # Include exception class name
+    include-exception-class: true
+
+    # Show detailed error messages
+    show-detailed-messages: true
+
+    # Include field-level validation errors
+    include-field-errors: true
+
+    # Documentation URL pattern (use {code} placeholder)
+    documentation-url-pattern: "https://docs.example.com/errors/{code}"
+
+    # Error source identifier (service name)
+    error-source: my-service
+
+    # Hide sensitive information in production
+    hide-in-production: true
+
+  # Metrics configuration (requires Micrometer)
+  metrics:
+    # Enable metrics collection
+    enabled: false
+
+    # SLO duration threshold (ms)
+    slo-duration: 500
+
+    # Metrics name prefix
+    prefix: envelope_response
+
+    # Additional tags
+    tags:
+      service: my-service
+      environment: production
+
+  # Cache configuration
+  cache:
+    # Enable response caching
+    enabled: false
+
+    # Default cache duration (seconds)
+    default-duration: 60
+
+    # Add Cache-Control header
+    add-cache-control-header: true
+
+    # Enable ETag support
+    etag-enabled: false
+
+  # Compression configuration
+  compression:
+    # Enable response compression
+    enabled: false
+
+    # Minimum size for compression (bytes)
+    min-size: 1024
+
+    # Compression level (1-9)
+    level: 6
+
+    # Content types to compress
+    content-types:
+      - application/json
+      - text/plain
+
+  # Version-specific configurations
+  versions:
+    v1:
+      legacy-mode: false
+    v2:
+      data-key: result
+      timestamp-format: EPOCH_MILLIS
+    legacy:
+      legacy-mode: true
+      deprecation-warning: "This API version is deprecated. Please migrate to v2."
+      sunset-date: "2025-01-01"

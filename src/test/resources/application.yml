@@ -1,0 +1,33 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+response-envelope:
+  enabled: true
+  default-config:
+    include-timestamp: true
+    include-request-id: true
+    include-path: true
+    include-method: true
+    include-duration: true
+    include-api-version: true
+    timestamp-format: ISO_8601
+    request-id-header: X-Request-ID
+    propagate-request-id: true
+    default-version: v1
+    timezone: UTC
+  error-config:
+    include-stacktrace: false
+    include-exception-class: true
+    show-detailed-messages: true
+    include-field-errors: true
+  metrics:
+    enabled: false
+  cache:
+    enabled: false
+  compression:
+    enabled: false
+
+logging:
+  level:
+    io.github.responseenvelope: DEBUG

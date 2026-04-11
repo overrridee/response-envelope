@@ -1,0 +1,255 @@
+{
+  "groups": [
+    {
+      "name": "response-envelope",
+      "type": "io.github.responseenvelope.config.EnvelopeProperties",
+      "description": "Response Envelope configuration properties."
+    },
+    {
+      "name": "response-envelope.default-config",
+      "type": "io.github.responseenvelope.config.EnvelopeProperties$DefaultConfig",
+      "description": "Default configuration for response envelope."
+    },
+    {
+      "name": "response-envelope.error-config",
+      "type": "io.github.responseenvelope.config.EnvelopeProperties$ErrorConfig",
+      "description": "Error handling configuration."
+    },
+    {
+      "name": "response-envelope.metrics",
+      "type": "io.github.responseenvelope.config.EnvelopeProperties$MetricsConfig",
+      "description": "Metrics configuration."
+    },
+    {
+      "name": "response-envelope.cache",
+      "type": "io.github.responseenvelope.config.EnvelopeProperties$CacheConfig",
+      "description": "Cache configuration."
+    },
+    {
+      "name": "response-envelope.compression",
+      "type": "io.github.responseenvelope.config.EnvelopeProperties$CompressionConfig",
+      "description": "Compression configuration."
+    }
+  ],
+  "properties": [
+    {
+      "name": "response-envelope.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable or disable response envelope feature.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.default-config.include-timestamp",
+      "type": "java.lang.Boolean",
+      "description": "Include timestamp in response.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.default-config.include-request-id",
+      "type": "java.lang.Boolean",
+      "description": "Include request ID in response.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.default-config.include-path",
+      "type": "java.lang.Boolean",
+      "description": "Include request path in response.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.default-config.include-method",
+      "type": "java.lang.Boolean",
+      "description": "Include HTTP method in response.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.default-config.include-duration",
+      "type": "java.lang.Boolean",
+      "description": "Include processing duration in response.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.default-config.include-api-version",
+      "type": "java.lang.Boolean",
+      "description": "Include API version in response.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.default-config.timestamp-format",
+      "type": "io.github.responseenvelope.enums.TimestampFormat",
+      "description": "Timestamp format.",
+      "defaultValue": "ISO_8601"
+    },
+    {
+      "name": "response-envelope.default-config.custom-timestamp-pattern",
+      "type": "java.lang.String",
+      "description": "Custom timestamp pattern for CUSTOM format.",
+      "defaultValue": "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
+    },
+    {
+      "name": "response-envelope.default-config.request-id-header",
+      "type": "java.lang.String",
+      "description": "Request ID header name.",
+      "defaultValue": "X-Request-ID"
+    },
+    {
+      "name": "response-envelope.default-config.propagate-request-id",
+      "type": "java.lang.Boolean",
+      "description": "Propagate request ID to response header.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.default-config.default-version",
+      "type": "java.lang.String",
+      "description": "Default API version.",
+      "defaultValue": "v1"
+    },
+    {
+      "name": "response-envelope.default-config.include-nulls",
+      "type": "java.lang.Boolean",
+      "description": "Include null values in JSON response.",
+      "defaultValue": false
+    },
+    {
+      "name": "response-envelope.default-config.data-key",
+      "type": "java.lang.String",
+      "description": "Default data key name.",
+      "defaultValue": "data"
+    },
+    {
+      "name": "response-envelope.default-config.timezone",
+      "type": "java.lang.String",
+      "description": "Timezone for timestamp formatting.",
+      "defaultValue": "UTC"
+    },
+    {
+      "name": "response-envelope.error-config.include-stacktrace",
+      "type": "java.lang.Boolean",
+      "description": "Include stack trace in error response (not recommended for production).",
+      "defaultValue": false
+    },
+    {
+      "name": "response-envelope.error-config.include-exception-class",
+      "type": "java.lang.Boolean",
+      "description": "Include exception class name in error response.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.error-config.show-detailed-messages",
+      "type": "java.lang.Boolean",
+      "description": "Show detailed error messages.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.error-config.include-field-errors",
+      "type": "java.lang.Boolean",
+      "description": "Include field-level validation errors.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.error-config.documentation-url-pattern",
+      "type": "java.lang.String",
+      "description": "Documentation URL pattern. Use {code} placeholder for error code.",
+      "defaultValue": ""
+    },
+    {
+      "name": "response-envelope.error-config.error-source",
+      "type": "java.lang.String",
+      "description": "Error source identifier (service name).",
+      "defaultValue": ""
+    },
+    {
+      "name": "response-envelope.error-config.hide-in-production",
+      "type": "java.lang.Boolean",
+      "description": "Hide sensitive error information in production.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.metrics.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable metrics collection.",
+      "defaultValue": false
+    },
+    {
+      "name": "response-envelope.metrics.slo-duration",
+      "type": "java.lang.Long",
+      "description": "SLO duration threshold in milliseconds.",
+      "defaultValue": 500
+    },
+    {
+      "name": "response-envelope.metrics.prefix",
+      "type": "java.lang.String",
+      "description": "Metrics name prefix.",
+      "defaultValue": "envelope_response"
+    },
+    {
+      "name": "response-envelope.cache.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable response caching.",
+      "defaultValue": false
+    },
+    {
+      "name": "response-envelope.cache.default-duration",
+      "type": "java.lang.Integer",
+      "description": "Default cache duration in seconds.",
+      "defaultValue": 60
+    },
+    {
+      "name": "response-envelope.cache.add-cache-control-header",
+      "type": "java.lang.Boolean",
+      "description": "Add Cache-Control header to response.",
+      "defaultValue": true
+    },
+    {
+      "name": "response-envelope.cache.etag-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable ETag support.",
+      "defaultValue": false
+    },
+    {
+      "name": "response-envelope.compression.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable response compression.",
+      "defaultValue": false
+    },
+    {
+      "name": "response-envelope.compression.min-size",
+      "type": "java.lang.Integer",
+      "description": "Minimum response size for compression in bytes.",
+      "defaultValue": 1024
+    },
+    {
+      "name": "response-envelope.compression.level",
+      "type": "java.lang.Integer",
+      "description": "Compression level (1-9).",
+      "defaultValue": 6
+    }
+  ],
+  "hints": [
+    {
+      "name": "response-envelope.default-config.timestamp-format",
+      "values": [
+        {
+          "value": "ISO_8601",
+          "description": "ISO 8601 format: 2024-04-10T14:30:00.000Z"
+        },
+        {
+          "value": "EPOCH_MILLIS",
+          "description": "Unix epoch milliseconds: 1712759400000"
+        },
+        {
+          "value": "EPOCH_SECONDS",
+          "description": "Unix epoch seconds: 1712759400"
+        },
+        {
+          "value": "RFC_1123",
+          "description": "RFC 1123 format: Wed, 10 Apr 2024 14:30:00 GMT"
+        },
+        {
+          "value": "CUSTOM",
+          "description": "Custom format using custom-timestamp-pattern"
+        }
+      ]
+    }
+  ]
+}
