@@ -1,6 +1,6 @@
-package io.github.responseenvelope.metrics;
+package io.github.overrridee.metrics;
 
-import io.github.responseenvelope.config.EnvelopeProperties;
+import io.github.overrridee.config.EnvelopeProperties;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Tag;

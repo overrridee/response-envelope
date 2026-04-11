@@ -1,7 +1,7 @@
-package io.github.responseenvelope.exception;
+package io.github.overrridee.exception;
 
-import io.github.responseenvelope.enums.ErrorCode;
-import io.github.responseenvelope.model.EnvelopeResponse;
+import io.github.overrridee.enums.ErrorCode;
+import io.github.overrridee.model.EnvelopeResponse;
 import lombok.Getter;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package io.github.responseenvelope.util;
+package io.github.overrridee.util;
 
 import org.springframework.stereotype.Component;
 

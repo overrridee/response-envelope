@@ -1,6 +1,6 @@
 # Spring Response Envelope
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.responseenvelope/spring-response-envelope.svg)](https://search.maven.org/artifact/io.github.responseenvelope/spring-response-envelope)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.overrridee/spring-response-envelope.svg)](https://search.maven.org/artifact/io.github.overrridee/spring-response-envelope)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java Version](https://img.shields.io/badge/Java-11%2B-blue)](https://openjdk.java.net/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7%2B-green)](https://spring.io/projects/spring-boot)
@@ -27,21 +27,21 @@ A powerful Spring Boot starter for consistent API response wrapping with rich me
 ```xml
 <!-- Java 21+ (Spring Boot 3.5+) -->
 <dependency>
-    <groupId>io.github.responseenvelope</groupId>
+    <groupId>io.github.overrridee</groupId>
     <artifactId>spring-response-envelope</artifactId>
     <version>0.2.1</version>
 </dependency>
 
 <!-- Java 17 (Spring Boot 3.0+) -->
 <dependency>
-    <groupId>io.github.responseenvelope</groupId>
+    <groupId>io.github.overrridee</groupId>
     <artifactId>spring-response-envelope</artifactId>
     <version>0.1.7</version>
 </dependency>
 
 <!-- Java 11 (Spring Boot 2.7+) -->
 <dependency>
-    <groupId>io.github.responseenvelope</groupId>
+    <groupId>io.github.overrridee</groupId>
     <artifactId>spring-response-envelope</artifactId>
     <version>0.1.1</version>
 </dependency>
@@ -50,13 +50,13 @@ A powerful Spring Boot starter for consistent API response wrapping with rich me
 **Gradle:**
 ```groovy
 // Java 21+
-implementation 'io.github.responseenvelope:spring-response-envelope:0.2.1'
+implementation 'io.github.overrridee:spring-response-envelope:0.2.1'
 
 // Java 17
-implementation 'io.github.responseenvelope:spring-response-envelope:0.1.7'
+implementation 'io.github.overrridee:spring-response-envelope:0.1.7'
 
 // Java 11
-implementation 'io.github.responseenvelope:spring-response-envelope:0.1.1'
+implementation 'io.github.overrridee:spring-response-envelope:0.1.1'
 ```
 
 ### 2. Use the Annotation
@@ -227,7 +227,7 @@ throw new BusinessException(ErrorCode.DUPLICATE_ENTITY, "User already exists");
     "code": "ERR_BIZ_002",
     "message": "Entity Not Found",
     "details": "The requested User with identifier '999' does not exist in the system",
-    "exception": "io.github.responseenvelope.exception.EntityNotFoundException",
+    "exception": "io.github.overrridee.exception.EntityNotFoundException",
     "fieldErrors": [],
     "documentationUrl": "https://docs.example.com/errors/ERR_BIZ_002"
   }

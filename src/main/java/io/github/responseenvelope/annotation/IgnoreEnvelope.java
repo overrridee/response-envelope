@@ -1,4 +1,4 @@
-package io.github.responseenvelope.annotation;
+package io.github.overrridee.annotation;
 
 import java.lang.annotation.*;
 

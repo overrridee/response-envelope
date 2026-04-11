@@ -1,6 +1,6 @@
-package io.github.responseenvelope.context;
+package io.github.overrridee.context;
 
-import io.github.responseenvelope.model.EnvelopeContext;
+import io.github.overrridee.model.EnvelopeContext;
 
 /**
  * Thread-local holder for EnvelopeContext.

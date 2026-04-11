@@ -1,15 +1,15 @@
-package io.github.responseenvelope.aspect;
+package io.github.overrridee.aspect;
 
-import io.github.responseenvelope.annotation.EnvelopeField;
-import io.github.responseenvelope.annotation.EnvelopeFields;
-import io.github.responseenvelope.annotation.IgnoreEnvelope;
-import io.github.responseenvelope.annotation.ResponseEnvelope;
-import io.github.responseenvelope.config.EnvelopeProperties;
-import io.github.responseenvelope.enums.WrapStrategy;
-import io.github.responseenvelope.model.EnvelopeContext;
-import io.github.responseenvelope.model.EnvelopeResponse;
-import io.github.responseenvelope.util.EnvelopeResponseBuilder;
-import io.github.responseenvelope.util.RequestIdGenerator;
+import io.github.overrridee.annotation.EnvelopeField;
+import io.github.overrridee.annotation.EnvelopeFields;
+import io.github.overrridee.annotation.IgnoreEnvelope;
+import io.github.overrridee.annotation.ResponseEnvelope;
+import io.github.overrridee.config.EnvelopeProperties;
+import io.github.overrridee.enums.WrapStrategy;
+import io.github.overrridee.model.EnvelopeContext;
+import io.github.overrridee.model.EnvelopeResponse;
+import io.github.overrridee.util.EnvelopeResponseBuilder;
+import io.github.overrridee.util.RequestIdGenerator;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -67,21 +67,21 @@ public class ResponseEnvelopeAspect {
     /**
      * Methods with method-level @ResponseEnvelope annotation.
      */
-    @Pointcut("@annotation(io.github.responseenvelope.annotation.ResponseEnvelope)")
+    @Pointcut("@annotation(io.github.overrridee.annotation.ResponseEnvelope)")
     public void methodLevelEnvelope() {
     }
 
     /**
      * Methods of classes with class-level @ResponseEnvelope annotation.
      */
-    @Pointcut("@within(io.github.responseenvelope.annotation.ResponseEnvelope)")
+    @Pointcut("@within(io.github.overrridee.annotation.ResponseEnvelope)")
     public void classLevelEnvelope() {
     }
 
     /**
      * Methods with @IgnoreEnvelope annotation.
      */
-    @Pointcut("@annotation(io.github.responseenvelope.annotation.IgnoreEnvelope)")
+    @Pointcut("@annotation(io.github.overrridee.annotation.IgnoreEnvelope)")
     public void ignoredMethods() {
     }
 

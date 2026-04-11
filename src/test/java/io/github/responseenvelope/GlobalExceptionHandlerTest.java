@@ -1,11 +1,11 @@
-package io.github.responseenvelope;
+package io.github.overrridee;
 
-import io.github.responseenvelope.annotation.ResponseEnvelope;
-import io.github.responseenvelope.enums.ErrorCode;
-import io.github.responseenvelope.exception.BusinessException;
-import io.github.responseenvelope.exception.EntityNotFoundException;
-import io.github.responseenvelope.exception.ValidationException;
-import io.github.responseenvelope.model.EnvelopeResponse;
+import io.github.overrridee.annotation.ResponseEnvelope;
+import io.github.overrridee.enums.ErrorCode;
+import io.github.overrridee.exception.BusinessException;
+import io.github.overrridee.exception.EntityNotFoundException;
+import io.github.overrridee.exception.ValidationException;
+import io.github.overrridee.model.EnvelopeResponse;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

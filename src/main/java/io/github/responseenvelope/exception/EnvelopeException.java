@@ -1,6 +1,6 @@
-package io.github.responseenvelope.exception;
+package io.github.overrridee.exception;
 
-import io.github.responseenvelope.enums.ErrorCode;
+import io.github.overrridee.enums.ErrorCode;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 

@@ -1,6 +1,6 @@
-package io.github.responseenvelope;
+package io.github.overrridee;
 
-import io.github.responseenvelope.config.EnvelopeFieldConfig;
+import io.github.overrridee.config.EnvelopeFieldConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

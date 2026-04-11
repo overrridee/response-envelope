@@ -1,7 +1,7 @@
-package io.github.responseenvelope.util;
+package io.github.overrridee.util;
 
-import io.github.responseenvelope.config.EnvelopeProperties;
-import io.github.responseenvelope.enums.TimestampFormat;
+import io.github.overrridee.config.EnvelopeProperties;
+import io.github.overrridee.enums.TimestampFormat;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
-package io.github.responseenvelope.config;
+package io.github.overrridee.config;
 
-import io.github.responseenvelope.interceptor.EnvelopeInterceptor;
+import io.github.overrridee.interceptor.EnvelopeInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Configuration;

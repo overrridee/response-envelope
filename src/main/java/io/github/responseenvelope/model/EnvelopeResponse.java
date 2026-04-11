@@ -1,4 +1,4 @@
-package io.github.responseenvelope.model;
+package io.github.overrridee.model;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonInclude;

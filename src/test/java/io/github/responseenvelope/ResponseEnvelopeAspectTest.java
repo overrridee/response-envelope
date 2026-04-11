@@ -1,9 +1,9 @@
-package io.github.responseenvelope;
+package io.github.overrridee;
 
-import io.github.responseenvelope.annotation.IgnoreEnvelope;
-import io.github.responseenvelope.annotation.ResponseEnvelope;
-import io.github.responseenvelope.config.EnvelopeProperties;
-import io.github.responseenvelope.model.EnvelopeResponse;
+import io.github.overrridee.annotation.IgnoreEnvelope;
+import io.github.overrridee.annotation.ResponseEnvelope;
+import io.github.overrridee.config.EnvelopeProperties;
+import io.github.overrridee.model.EnvelopeResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

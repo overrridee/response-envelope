@@ -1,9 +1,9 @@
-package io.github.responseenvelope.serializer;
+package io.github.overrridee.serializer;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import io.github.responseenvelope.model.EnvelopeResponse;
+import io.github.overrridee.model.EnvelopeResponse;
 
 import java.io.IOException;
 

@@ -1,7 +1,7 @@
-package io.github.responseenvelope.annotation;
+package io.github.overrridee.annotation;
 
-import io.github.responseenvelope.enums.TimestampFormat;
-import io.github.responseenvelope.enums.WrapStrategy;
+import io.github.overrridee.enums.TimestampFormat;
+import io.github.overrridee.enums.WrapStrategy;
 
 import java.lang.annotation.*;
 
@@ -36,8 +36,8 @@ import java.lang.annotation.*;
  *
  * @author aedemirsen
  * @version 1.0.0
- * @see io.github.responseenvelope.aspect.ResponseEnvelopeAspect
- * @see io.github.responseenvelope.model.EnvelopeResponse
+ * @see io.github.overrridee.aspect.ResponseEnvelopeAspect
+ * @see io.github.overrridee.model.EnvelopeResponse
  */
 @Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

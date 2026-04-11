@@ -1,4 +1,4 @@
-package io.github.responseenvelope.config;
+package io.github.overrridee.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

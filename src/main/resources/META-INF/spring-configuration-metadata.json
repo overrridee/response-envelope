@@ -2,32 +2,32 @@
   "groups": [
     {
       "name": "response-envelope",
-      "type": "io.github.responseenvelope.config.EnvelopeProperties",
+      "type": "io.github.overrridee.config.EnvelopeProperties",
       "description": "Response Envelope configuration properties."
     },
     {
       "name": "response-envelope.default-config",
-      "type": "io.github.responseenvelope.config.EnvelopeProperties$DefaultConfig",
+      "type": "io.github.overrridee.config.EnvelopeProperties$DefaultConfig",
       "description": "Default configuration for response envelope."
     },
     {
       "name": "response-envelope.error-config",
-      "type": "io.github.responseenvelope.config.EnvelopeProperties$ErrorConfig",
+      "type": "io.github.overrridee.config.EnvelopeProperties$ErrorConfig",
       "description": "Error handling configuration."
     },
     {
       "name": "response-envelope.metrics",
-      "type": "io.github.responseenvelope.config.EnvelopeProperties$MetricsConfig",
+      "type": "io.github.overrridee.config.EnvelopeProperties$MetricsConfig",
       "description": "Metrics configuration."
     },
     {
       "name": "response-envelope.cache",
-      "type": "io.github.responseenvelope.config.EnvelopeProperties$CacheConfig",
+      "type": "io.github.overrridee.config.EnvelopeProperties$CacheConfig",
       "description": "Cache configuration."
     },
     {
       "name": "response-envelope.compression",
-      "type": "io.github.responseenvelope.config.EnvelopeProperties$CompressionConfig",
+      "type": "io.github.overrridee.config.EnvelopeProperties$CompressionConfig",
       "description": "Compression configuration."
     }
   ],
@@ -76,7 +76,7 @@
     },
     {
       "name": "response-envelope.default-config.timestamp-format",
-      "type": "io.github.responseenvelope.enums.TimestampFormat",
+      "type": "io.github.overrridee.enums.TimestampFormat",
       "description": "Timestamp format.",
       "defaultValue": "ISO_8601"
     },

@@ -1,6 +1,6 @@
-package io.github.responseenvelope.model;
+package io.github.overrridee.model;
 
-import io.github.responseenvelope.annotation.ResponseEnvelope;
+import io.github.overrridee.annotation.ResponseEnvelope;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

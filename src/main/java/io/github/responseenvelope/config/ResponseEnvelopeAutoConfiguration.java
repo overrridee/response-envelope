@@ -1,12 +1,12 @@
-package io.github.responseenvelope.config;
+package io.github.overrridee.config;
 
-import io.github.responseenvelope.advice.ResponseEnvelopeAdvice;
-import io.github.responseenvelope.filter.RequestIdFilter;
-import io.github.responseenvelope.handler.GlobalExceptionHandler;
-import io.github.responseenvelope.metrics.EnvelopeMetrics;
-import io.github.responseenvelope.util.EnvelopeResponseBuilder;
-import io.github.responseenvelope.util.RequestIdGenerator;
-import io.github.responseenvelope.util.TimestampFormatter;
+import io.github.overrridee.advice.ResponseEnvelopeAdvice;
+import io.github.overrridee.filter.RequestIdFilter;
+import io.github.overrridee.handler.GlobalExceptionHandler;
+import io.github.overrridee.metrics.EnvelopeMetrics;
+import io.github.overrridee.util.EnvelopeResponseBuilder;
+import io.github.overrridee.util.RequestIdGenerator;
+import io.github.overrridee.util.TimestampFormatter;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -31,7 +31,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 @ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)
 @ConditionalOnProperty(prefix = "response-envelope", name = "enabled", havingValue = "true", matchIfMissing = true)
-@ComponentScan(basePackages = "io.github.responseenvelope")
+@ComponentScan(basePackages = "io.github.overrridee")
 public class ResponseEnvelopeAutoConfiguration {
 
     /**

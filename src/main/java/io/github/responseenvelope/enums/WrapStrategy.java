@@ -1,4 +1,4 @@
-package io.github.responseenvelope.enums;
+package io.github.overrridee.enums;
 
 /**
  * Response wrapping strategies.

@@ -1,6 +1,6 @@
-package io.github.responseenvelope.config;
+package io.github.overrridee.config;
 
-import io.github.responseenvelope.enums.TimestampFormat;
+import io.github.overrridee.enums.TimestampFormat;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;

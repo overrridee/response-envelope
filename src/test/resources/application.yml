@@ -30,4 +30,4 @@ response-envelope:
 
 logging:
   level:
-    io.github.responseenvelope: DEBUG
+    io.github.overrridee: DEBUG

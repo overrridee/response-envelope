@@ -1,7 +1,7 @@
-package io.github.responseenvelope;
+package io.github.overrridee;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.responseenvelope.model.EnvelopeResponse;
+import io.github.overrridee.model.EnvelopeResponse;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

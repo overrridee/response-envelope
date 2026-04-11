@@ -1,10 +1,10 @@
-package io.github.responseenvelope.util;
+package io.github.overrridee.util;
 
-import io.github.responseenvelope.annotation.ResponseEnvelope;
-import io.github.responseenvelope.config.EnvelopeFieldConfig;
-import io.github.responseenvelope.config.EnvelopeProperties;
-import io.github.responseenvelope.model.EnvelopeContext;
-import io.github.responseenvelope.model.EnvelopeResponse;
+import io.github.overrridee.annotation.ResponseEnvelope;
+import io.github.overrridee.config.EnvelopeFieldConfig;
+import io.github.overrridee.config.EnvelopeProperties;
+import io.github.overrridee.model.EnvelopeContext;
+import io.github.overrridee.model.EnvelopeResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Slice;

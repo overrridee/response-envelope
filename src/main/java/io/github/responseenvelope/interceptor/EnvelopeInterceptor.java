@@ -1,6 +1,6 @@
-package io.github.responseenvelope.interceptor;
+package io.github.overrridee.interceptor;
 
-import io.github.responseenvelope.config.EnvelopeProperties;
+import io.github.overrridee.config.EnvelopeProperties;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

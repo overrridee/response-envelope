@@ -1,6 +1,6 @@
-package io.github.responseenvelope;
+package io.github.overrridee;
 
-import io.github.responseenvelope.util.RequestIdGenerator;
+import io.github.overrridee.util.RequestIdGenerator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
