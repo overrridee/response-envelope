@@ -66,3 +66,4 @@ lombok.config
 # Spring Boot
 spring-shell.log
 /dev-docs/
+/.flattened-pom.xml
