@@ -2,8 +2,8 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.overrridee/spring-response-envelope.svg)](https://search.maven.org/artifact/io.github.overrridee/spring-response-envelope)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Java Version](https://img.shields.io/badge/Java-11%2B-blue)](https://openjdk.java.net/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7%2B-green)](https://spring.io/projects/spring-boot)
+[![Java Version](https://img.shields.io/badge/Java-21-blue)](https://openjdk.java.net/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5%2B-green)](https://spring.io/projects/spring-boot)
 
 A powerful Spring Boot starter for consistent API response wrapping with rich metadata support.
 
@@ -25,38 +25,16 @@ A powerful Spring Boot starter for consistent API response wrapping with rich me
 
 **Maven:**
 ```xml
-<!-- Java 21+ (Spring Boot 3.5+) -->
 <dependency>
     <groupId>io.github.overrridee</groupId>
     <artifactId>spring-response-envelope</artifactId>
     <version>0.2.1</version>
 </dependency>
-
-<!-- Java 17 (Spring Boot 3.0+) -->
-<dependency>
-    <groupId>io.github.overrridee</groupId>
-    <artifactId>spring-response-envelope</artifactId>
-    <version>0.1.7</version>
-</dependency>
-
-<!-- Java 11 (Spring Boot 2.7+) -->
-<dependency>
-    <groupId>io.github.overrridee</groupId>
-    <artifactId>spring-response-envelope</artifactId>
-    <version>0.1.1</version>
-</dependency>
 ```
 
 **Gradle:**
 ```groovy
-// Java 21+
 implementation 'io.github.overrridee:spring-response-envelope:0.2.1'
-
-// Java 17
-implementation 'io.github.overrridee:spring-response-envelope:0.1.7'
-
-// Java 11
-implementation 'io.github.overrridee:spring-response-envelope:0.1.1'
 ```
 
 ### 2. Use the Annotation
@@ -356,43 +334,17 @@ Available metrics:
 3. **Webhooks** - External systems may expect specific formats
 4. **GraphQL** - Already has structured response format
 
-## Multi-Version Java Support
-
-Choose the appropriate version based on your Java version:
-
-| Java | Library Version | Spring Boot | Status |
-|------|----------------|-------------|--------|
-| Java 11 | **0.1.1** | 2.7.x | LTS |
-| Java 17 | **0.1.7** | 3.0.x-3.4.x | LTS |
-| Java 21 | **0.2.1** | 3.5.x+ | Latest |
-
-### Build with Specific Java Version
-
-```bash
-# Java 11
-mvn clean package -P java-11
-
-# Java 17
-mvn clean package -P java-17
-
-# Java 21 (default)
-mvn clean package
-```
-
-See [Versioning Guide](dev-docs/VERSIONING_GUIDE.md) for detailed information.
 
 ## Requirements
 
-- Java 11+, 17+, or 21+
-- Spring Boot 2.7.x, 3.0.x+, or 3.5.x+
+- Java 21+
+- Spring Boot 3.5.x+
 - Spring AOP
 
 ## Documentation
 
 - 📖 [Developer Guide](dev-docs/DEVELOPER_GUIDE.md) - Comprehensive usage guide (100+ examples)
 - 📚 [Turkish Guide](dev-docs/RESPONSE_ENVELOPE_KILAVUZU.md) - Detailed Turkish guide
-- 🔄 [Versioning Guide](dev-docs/VERSIONING_GUIDE.md) - Multi-version Java support guide
-- 📋 [Java 11 Migration](dev-docs/JAVA11_MIGRATION.md) - Jakarta to Javax migration guide
 - 📊 [Changelog](dev-docs/CHANGELOG.md) - Version history and release notes
 
 ## License
